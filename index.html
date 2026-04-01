@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIZ Prensipleri - Hafıza Kartları</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Üst navigasyon: 1-2-3-4 -->
+  <nav class="tab-nav" id="tabNav">
+    <button class="tab-btn active" onclick="goToCard(0)">1</button>
+    <button class="tab-btn" onclick="goToCard(1)">2</button>
+    <button class="tab-btn" onclick="goToCard(2)">3</button>
+    <button class="tab-btn" onclick="goToCard(3)">4</button>
+  </nav>
+
+  <div class="carousel">
+    <button class="nav-btn prev-btn" onclick="prevCard()" aria-label="Önceki kart">&larr;</button>
+
+    <div class="cards-container" id="cardsContainer">
+
+      <!-- ==================== KART 1: BÖLME (Segmentation) — DİREK ==================== -->
+      <div class="card-wrapper active" data-index="0">
+        <div class="card" id="card-0">
+          <div class="card-inner">
+            <div class="card-face card-front parchment">
+              <div class="card-border">
+                <h2 class="card-title">1. BÖLME</h2>
+                <p class="card-title-en">Segmentation</p>
+                <div class="principles">
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Bir nesneyi bağımsız parçalara böl
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Nesneyi kolay sökülebilir/takılabilir yap
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-dots"></span>
+                    Parçalanma derecesini artır
+                  </div>
+                </div>
+                <hr class="dashed-line">
+                <div class="summary">
+                  <strong>Özet:</strong> Bir sistemi tek parça yerine modüllere bölerek daha kolay üretilebilir, taşınabilir, tamir edilebilir veya değiştirilebilir hale getir.
+                </div>
+                <hr class="dashed-line">
+                <div class="examples">
+                  <strong>Kısa örnekler:</strong>
+                  <ul>
+                    <li>Modüler mobilya</li>
+                    <li>Takılıp çıkarılabilir telefon bataryası</li>
+                    <li>Parçalara ayrılabilen makine</li>
+                    <li>Mikroservis yazılım mimarisi</li>
+                    <li>Lego mantığı ürün tasarımı</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-border-back">
+                <h3>Hikayenin TRIZ Karşılığı</h3>
+                <p class="back-intro">Bu hikaye = Bölme prensibinin 3 maddesi:</p>
+                <table class="triz-table">
+                  <thead>
+                    <tr><th>Hikaye</th><th>TRIZ Maddesi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Direği parçalara bölmek</td>
+                      <td>Bağımsız parçalara böl</td>
+                    </tr>
+                    <tr>
+                      <td>Törende tekrar kurmak</td>
+                      <td>Kolay sökülebilir / takılabilir yap</td>
+                    </tr>
+                    <tr>
+                      <td>Taş tozu ile tamir</td>
+                      <td>Parçalanma derecesini artır</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr class="dashed-line-back">
+                <h3>Hafıza Cümlesi</h3>
+                <p class="memory-label">Şunu ezberle:</p>
+                <blockquote class="memory-sentence">
+                  "İnka direği parçalandı &rarr; evlerde saklandı &rarr; törende birleşti &rarr; tozu ile tamir edildi."
+                </blockquote>
+                <p class="memory-footer">Bunu hatırlarsan <strong>Bölme</strong> prensibini asla unutmazsın.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="flip-btn" onclick="flipCard(0)">Kartı Çevir</button>
+      </div>
+
+      <!-- ==================== KART 2: AYIRMA (Taking Out) — KUĞU ==================== -->
+      <div class="card-wrapper" data-index="1">
+        <div class="card" id="card-1">
+          <div class="card-inner">
+            <div class="card-face card-front parchment">
+              <div class="card-border">
+                <h2 class="card-title">2. AYIRMA</h2>
+                <p class="card-title-en">Taking Out</p>
+                <div class="principles">
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Rahatsız edici parçayı veya özelliği nesneden ayır
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Sadece gerekli parçayı veya özelliği çıkar
+                  </div>
+                </div>
+                <hr class="dashed-line">
+                <div class="summary">
+                  <strong>Özet:</strong> Bir nesneden rahatsız edici kısmı ayır veya sadece işe yarayan özelliği çıkar. Bütünü almak yerine, ihtiyacın olan parçayı izole et.
+                </div>
+                <hr class="dashed-line">
+                <div class="examples">
+                  <strong>Kısa örnekler:</strong>
+                  <ul>
+                    <li>Gürültülü kompresörü dışarı taşımak</li>
+                    <li>Uzaktan kumandalı TV (kumanda ayrıldı)</li>
+                    <li>Parfümden sadece koku molekülünü sentezlemek</li>
+                    <li>Bulut bilişim (sunucuyu ofisten ayırmak)</li>
+                    <li>Kablosuz kulaklık (kabloyu çıkarmak)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-border-back">
+                <h3>Hikayenin TRIZ Karşılığı</h3>
+                <p class="back-intro">Bu hikaye = Ayırma prensibinin 2 maddesi:</p>
+                <table class="triz-table">
+                  <thead>
+                    <tr><th>Hikaye</th><th>TRIZ Maddesi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Kuğuyu gürültülü pazardan ayırıp sessiz göle taşımak</td>
+                      <td>Rahatsız edici parçayı ayır</td>
+                    </tr>
+                    <tr>
+                      <td>Kuğuya dokunmadan sadece dökülen tüyleri toplamak</td>
+                      <td>Sadece gerekli özelliği çıkar</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr class="dashed-line-back">
+                <h3>Hafıza Cümlesi</h3>
+                <p class="memory-label">Şunu ezberle:</p>
+                <blockquote class="memory-sentence">
+                  "Kuğu gürültülü pazardan sessiz göle taşındı &rarr; tüyleri dokunulmadan toplandı."
+                </blockquote>
+                <p class="memory-footer">Bunu hatırlarsan <strong>Ayırma</strong> prensibini asla unutmazsın.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="flip-btn" onclick="flipCard(1)">Kartı Çevir</button>
+      </div>
+
+      <!-- ==================== KART 3: YEREL NİTELİK (Local Quality) — MARTI ==================== -->
+      <div class="card-wrapper" data-index="2">
+        <div class="card" id="card-2">
+          <div class="card-inner">
+            <div class="card-face card-front parchment">
+              <div class="card-border">
+                <h2 class="card-title">3. YEREL NİTELİK</h2>
+                <p class="card-title-en">Local Quality</p>
+                <div class="principles">
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Nesnenin yapısını homojen yerine heterojen yap
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Her parçayı kendi koşuluna en uygun şekilde çalıştır
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-dots"></span>
+                    Her parçaya farklı ve yararlı bir işlev ver
+                  </div>
+                </div>
+                <hr class="dashed-line">
+                <div class="summary">
+                  <strong>Özet:</strong> Homojen bir yapıyı heterojen hale getir. Her parçanın kendi koşuluna en uygun şekilde çalışmasını sağla. Her parçaya farklı ama yararlı bir işlev ver.
+                </div>
+                <hr class="dashed-line">
+                <div class="examples">
+                  <strong>Kısa örnekler:</strong>
+                  <ul>
+                    <li>Çok odaklı gözlük camı (yakın/uzak)</li>
+                    <li>İsviçre çakısı (her alet farklı işlev)</li>
+                    <li>Bölgesel iklim kontrolü (oda oda ayar)</li>
+                    <li>Farklı sertlikte yatak bölgeleri</li>
+                    <li>Kalem ucunun yazma, silginin silme işlevi</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-border-back">
+                <h3>Hikayenin TRIZ Karşılığı</h3>
+                <p class="back-intro">Bu hikaye = Yerel Nitelik prensibinin 3 maddesi:</p>
+                <table class="triz-table">
+                  <thead>
+                    <tr><th>Hikaye</th><th>TRIZ Maddesi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Kıyıyı sığ/orta/derin bölgelere ayırmak</td>
+                      <td>Yapıyı homojen yerine heterojen yap</td>
+                    </tr>
+                    <tr>
+                      <td>Küçük martılar sığ suya, büyük martılar derin suya</td>
+                      <td>Her parçayı en uygun koşulda çalıştır</td>
+                    </tr>
+                    <tr>
+                      <td>Gözcü martı, avcı martı, bakıcı martı</td>
+                      <td>Her parçaya farklı yararlı işlev ver</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr class="dashed-line-back">
+                <h3>Hafıza Cümlesi</h3>
+                <p class="memory-label">Şunu ezberle:</p>
+                <blockquote class="memory-sentence">
+                  "Kıyı bölgelere ayrıldı &rarr; her martı kendi suyuna yerleşti &rarr; biri gözcü, biri avcı, biri bakıcı oldu."
+                </blockquote>
+                <p class="memory-footer">Bunu hatırlarsan <strong>Yerel Nitelik</strong> prensibini asla unutmazsın.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="flip-btn" onclick="flipCard(2)">Kartı Çevir</button>
+      </div>
+
+      <!-- ==================== KART 4: ASİMETRİ (Asymmetry) — YELKENLİ ==================== -->
+      <div class="card-wrapper" data-index="3">
+        <div class="card" id="card-3">
+          <div class="card-inner">
+            <div class="card-face card-front parchment">
+              <div class="card-border">
+                <h2 class="card-title">4. ASİMETRİ</h2>
+                <p class="card-title-en">Asymmetry</p>
+                <div class="principles">
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Simetrik nesnenin şeklini asimetrik yap
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-box"></span>
+                    Zaten asimetrikse, asimetri derecesini artır
+                  </div>
+                  <div class="principle-item">
+                    <span class="icon-dots"></span>
+                    Dış kuvvetler asimetrikse, tasarımı da ona göre asimetrik yap
+                  </div>
+                </div>
+                <hr class="dashed-line">
+                <div class="summary">
+                  <strong>Özet:</strong> Simetrik bir yapıyı asimetrik hale getirerek performansı, verimliliği veya uyumu artır. Dış kuvvetler zaten asimetrikse, tasarımı da ona göre asimetrik yap.
+                </div>
+                <hr class="dashed-line">
+                <div class="examples">
+                  <strong>Kısa örnekler:</strong>
+                  <ul>
+                    <li>Asimetrik lastik diş deseni (ıslak/kuru yol)</li>
+                    <li>Uçak kanadı üst-alt profil farkı (kaldırma kuvveti)</li>
+                    <li>Ergonomik fare / klavye tasarımı</li>
+                    <li>Mikser bıçaklarının farklı açıları</li>
+                    <li>Asimetrik ambalaj (tek yönlü kolay açılma)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-border-back">
+                <h3>Hikayenin TRIZ Karşılığı</h3>
+                <p class="back-intro">Bu hikaye = Asimetri prensibinin 3 maddesi:</p>
+                <table class="triz-table">
+                  <thead>
+                    <tr><th>Hikaye</th><th>TRIZ Maddesi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Düz sala eğimli omurga eklemek</td>
+                      <td>Simetrik şekli asimetrik yap</td>
+                    </tr>
+                    <tr>
+                      <td>Kare yelkeği üçgen-kavisli kesmek</td>
+                      <td>Asimetri derecesini artır</td>
+                    </tr>
+                    <tr>
+                      <td>Fırtınada ağırlığı kaydırmak</td>
+                      <td>Dış kuvvetlere göre asimetri uygula</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr class="dashed-line-back">
+                <h3>Hafıza Cümlesi</h3>
+                <p class="memory-label">Şunu ezberle:</p>
+                <blockquote class="memory-sentence">
+                  "Düz sal eğildi &rarr; omurga saplandı &rarr; yelken üçgen kesildi &rarr; fırtınada ağırlık kaydı."
+                </blockquote>
+                <p class="memory-footer">Bunu hatırlarsan <strong>Asimetri</strong> prensibini asla unutmazsın.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="flip-btn" onclick="flipCard(3)">Kartı Çevir</button>
+      </div>
+
+    </div>
+
+    <button class="nav-btn next-btn" onclick="nextCard()" aria-label="Sonraki kart">&rarr;</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
